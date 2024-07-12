@@ -1,2 +1,2 @@
-# CGNC_Targeted_Adversarial_Attacks
-[ECCV-2024] Targeted Adversarial Attack, CLIP, Generative adversarial network, Multiclass
+# CLIP-Guided Generative Networks for Transferable Targeted Adversarial Attacks
+[ECCV-2024] A PyTorch official implementation for CLIP-Guided Generative Networks for Transferable Targeted Adversarial Attacks, accepted to ECCV-2024.
