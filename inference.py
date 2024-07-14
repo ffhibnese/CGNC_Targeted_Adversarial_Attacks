@@ -7,8 +7,8 @@ parser.add_argument('--test_dir', default='', help='Testing Data')
 parser.add_argument('--batch_size', type=int, default=10, help='Batch Size')
 parser.add_argument('--model_t',type=str, default= 'all',  help ='Model under attack : vgg16, vgg19, ..., dense121')
 parser.add_argument('--label_flag', type=str, default='N8', help='Label nums: N8, C20, C50, ...')
-parser.add_argument('--single', action='store_true', help='single class')
-parser.add_argument('--single_class', type=int, help='single class')
+parser.add_argument('--finetune', action='store_true', help='Finetune for single class attack')
+parser.add_argument('--finetune_class', type=int, help='Class id to be finetuned')
 args = parser.parse_args()
 print(args)
 
@@ -46,8 +46,8 @@ for model_name in model_name_list:
         transforms.ToTensor(),
     ])
 
-    if args.single:
-        class_ids = np.array([args.single_class])
+    if args.finetune:
+        class_ids = np.array([args.finetune_class])
     else:
         class_ids = get_classes(args.label_flag)
 
