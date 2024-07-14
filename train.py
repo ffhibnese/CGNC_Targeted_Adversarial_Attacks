@@ -24,7 +24,6 @@ parser.add_argument('--load_path', type=str, help='Path to checkpoint')
 parser.add_argument('--finetune', action='store_true', help='Finetune for single class attack')
 parser.add_argument('--finetune_class', type=int, help='Class id to be finetuned')
 parser.add_argument('--mask_ratio', type=float, default='2e-1', help='Mask ratio in finetune stage')
-parser.add_argument('--seed', type=int, default=1111)
 args = parser.parse_args()
 print(args)
 
@@ -36,7 +35,7 @@ eps = args.eps / 255.
 use_gpu = torch.cuda.is_available()
 if use_gpu:
     torch.backends.cudnn.benchmark = True
-    torch.cuda.manual_seed_all(args.seed)
+    torch.cuda.manual_seed_all(1111)
 
 # GPU
 device_ids = [i for i in range(0, torch.cuda.device_count())]
