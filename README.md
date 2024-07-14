@@ -8,7 +8,8 @@
 [Hao Wu](https://dblp.org/pid/72/4250.html),
 [Shu-Tao Xia](https://www.sigs.tsinghua.edu.cn/xst/main.htm)
 
-![pipeline](./figures/pipeline.png)
+<!-- ![pipeline](./figures/pipeline.png) -->
+<img src="./figures/pipeline.png" width="60%">
 
 ## Results
 ![results](./figures/results.png)
