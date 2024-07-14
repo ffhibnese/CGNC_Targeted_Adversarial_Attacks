@@ -30,11 +30,7 @@ conda activate CGNC
 
 
 ```python
-python train.py --train_dir $DATA_PATH/ImageNet/train --model_type incv3 --eps 16 --batch_size 20 --start_epoch 0 --nz 16 --epochs 10 --label_flag 'N8'
-```
-
-```python
-python train.py --train_dir $DATA_PATH/ImageNet/train --model_type res152 --eps 16 --batch_size 20 --start_epoch 0 --nz 16 --epochs 10 --label_flag 'N8'
+python train.py --train_dir $DATA_PATH/ImageNet/train --model_type incv3 --start_epoch 0 --epochs 10 --label_flag 'N8'
 ```
 
 ### Finetuning
@@ -42,31 +38,18 @@ Below we provide running commands for finetuning the CLIP-guided generator based
 
 
 ```python
-python train.py --train_dir $DATA_DIR/ImageNet/train --model_type incv3 --eps 16 --batch_size 20 --start_epoch 10 --nz 16 --epochs 15 --label_flag 'N8' --load_path $CKPT_DIR/incv3/model-9.pth --finetune --finetune_class 150 --mask_ratio 0.2
-```
-
-```python
-python train.py --train_dir $DATA_DIR/ImageNet/train --model_type res152 --eps 16 --batch_size 20 --start_epoch 10 --nz 16 --epochs 15 --label_flag 'N8' --load_path $CKPT_DIR/res152/model-9.pth --finetune
---finetune_class 150 --mask_ratio 0.2
+python train.py --train_dir $DATA_DIR/ImageNet/train --model_type incv3 --start_epoch 10 --epochs 15 --label_flag 'N8' --load_path $CKPT_DIR/incv3/model-9.pth --finetune --finetune_class 150
 ```
 
 ### Generating adversarial examples
 Below we provide running commands for generating targeted adversarial examples on [ImageNet NeurIPS validation set](https://www.kaggle.com/c/nips-2017-non-targeted-adversarial-attack) (1k images) under our multi-class setting:
 ```python
-python eval.py --data_dir data/ImageNet1k/ --model_type incv3 --eps 16 --load_path $SAVE_CHECKPOINT --save_dir ADV_DIR
-```
-
-```python
-python eval.py --data_dir data/ImageNet1k/ --model_type res152 --eps 16 --load_path $SAVE_CHECKPOINT --save_dir ADV_DIR
+python eval.py --data_dir data/ImageNet1k/ --model_type incv3 --load_path $SAVE_CHECKPOINT --save_dir ADV_DIR
 ```
 
 Below we provide running commands for generating targeted adversarial examples on [ImageNet NeurIPS validation set](https://www.kaggle.com/c/nips-2017-non-targeted-adversarial-attack) (1k images) under our single-class setting (take class id 150 as example):
 ```python
-python eval.py --data_dir data/ImageNet1k/ --model_type incv3 --eps 16 --load_path $SAVE_CHECKPOINT --save_dir $IMAGES_DIR --finetune --finetune_class 150
-```
-
-```python
-python eval.py --data_dir data/ImageNet1k/ --model_type res152 --eps 16 --load_path $SAVE_CHECKPOINT --save_dir $IMAGES_DIR --finetune --finetune_class 150
+python eval.py --data_dir data/ImageNet1k/ --model_type incv3 --load_path $SAVE_CHECKPOINT --save_dir $IMAGES_DIR --finetune --finetune_class 150
 ```
 
 ### Testing
