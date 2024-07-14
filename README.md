@@ -12,7 +12,7 @@
 
 ## Results
 <!-- ![results](./figures/results.png) -->
-<img src="./figures/results.png" width="60%">
+<img src="./figures/results.png" width="80%">
 
 ## Setup
 We provide the environment configuration file exported by Anaconda, which can help you build up conveniently.
