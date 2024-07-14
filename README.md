@@ -8,11 +8,11 @@
 [Hao Wu](https://dblp.org/pid/72/4250.html),
 [Shu-Tao Xia](https://www.sigs.tsinghua.edu.cn/xst/main.htm)
 
-<!-- ![pipeline](./figures/pipeline.png) -->
-<img src="./figures/pipeline.png" width="60%">
+![pipeline](./figures/pipeline.png)
 
 ## Results
-![results](./figures/results.png)
+<!-- ![results](./figures/results.png) -->
+<img src="./figures/results.png" width="60%">
 
 ## Setup
 We provide the environment configuration file exported by Anaconda, which can help you build up conveniently.
