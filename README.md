@@ -33,7 +33,7 @@ conda activate CGNC
 python train.py --train_dir $DATA_PATH/ImageNet/train --model_type incv3 --start_epoch 0 --epochs 10 --label_flag 'N8'
 ```
 
-### Finetuning
+### Single-target Masked Finetuning
 Below we provide running commands for finetuning the CLIP-guided generator based on one single class if necessary (take class id 150 as example).
 
 
