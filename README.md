@@ -1,5 +1,5 @@
 # CLIP-Guided Generative Networks for Transferable Targeted Adversarial Attacks
-[ECCV-2024] A PyTorch official implementation for CLIP-Guided Generative Networks for Transferable Targeted Adversarial Attacks, accepted to ECCV-2024. [Link](http://arxiv.org/abs/2407.10179)
+[ECCV-2024] A PyTorch official implementation for [CLIP-Guided Generative Networks for Transferable Targeted Adversarial Attacks](http://arxiv.org/abs/2407.10179), accepted to ECCV-2024.
 
 [Hao Fang*](https://scholar.google.cz/citations?user=12237G0AAAAJ&hl=zh-CN),
 [Jiawei Kong*](https://scholar.google.cz/citations?user=enfcklIAAAAJ&hl=zh-CN), 
