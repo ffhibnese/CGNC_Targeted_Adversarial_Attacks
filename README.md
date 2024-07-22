@@ -61,4 +61,11 @@ python inference.py --test_dir $IMAGES_DIR --model_t vgg16
 ```
 
 ## Cite
-Coming soon...
+```python
+@article{fang2024clip,
+  title={CLIP-Guided Networks for Transferable Targeted Attacks},
+  author={Fang, Hao and Kong, Jiawei and Chen, Bin and Dai, Tao and Wu, Hao and Xia, Shu-Tao},
+  journal={arXiv preprint arXiv:2407.10179},
+  year={2024}
+}
+```
