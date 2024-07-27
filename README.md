@@ -33,6 +33,8 @@ conda activate CGNC
 python train.py --train_dir $DATA_PATH/ImageNet/train --model_type incv3 --start_epoch 0 --epochs 10 --label_flag 'N8'
 ```
 
+Download pretrained generators [CGNC-Incv3](https://drive.google.com/file/d/1iq4WrxObFivPwFw0r5oomCs3ktvKvKIw/view?usp=drive_link) and [CGNC-Res152](https://drive.google.com/file/d/1zjtZ4Gu2ZH-A5Tqv9EsQjmzKltTFLEru/view?usp=drive_link) based on the setting of 8 different classes.
+
 ### Single-target Masked Finetuning
 Below we provide running commands for finetuning the CLIP-guided generator based on one single class if necessary (take class id 150 as example).
 
