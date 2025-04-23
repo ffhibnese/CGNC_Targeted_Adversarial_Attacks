@@ -170,10 +170,10 @@ def getClassIndex():
     load_dic = json.load(file)
     class_list = []
     for item in load_dic:
-        l = []
-        l.append(load_dic[item][0])
-        l.append(load_dic[item][1])
-        class_list.append(l)
+        cls = []
+        cls.append(load_dic[item][0])
+        cls.append(load_dic[item][1])
+        class_list.append(cls)
     return class_list
 
 
