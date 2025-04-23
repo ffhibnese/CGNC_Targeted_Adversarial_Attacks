@@ -10,6 +10,7 @@ import torchvision.datasets as datasets
 from image_transformer import TwoCropTransform
 import timm
 from torch.utils import model_zoo
+import json
 
 
 def load_robust_model(model_name):
@@ -162,6 +163,18 @@ def get_data(train_dir, scale_size, img_size):
     train_size = len(train_set)
     print('Training data size:', train_size)
     return train_set
+
+
+def getClassIndex():
+    file = open('imagenet_class_index.json', 'r')
+    load_dic = json.load(file)
+    class_list = []
+    for item in load_dic:
+        l = []
+        l.append(load_dic[item][0])
+        l.append(load_dic[item][1])
+        class_list.append(l)
+    return class_list
 
 
 def get_mask(batch_perturb, mask_ratio, device, patch_size=32):
